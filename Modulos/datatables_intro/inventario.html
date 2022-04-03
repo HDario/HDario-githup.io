@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tutorial DataTables</title>
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- CSS personalizado --> 
+    <link rel="stylesheet" href="main.css">  
+      
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+           
+  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <!-- CSS personalizado --> 
+        <link rel="stylesheet" href="main.css">  
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+        <!--datables estilo bootstrap 4 CSS-->  
+        <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+    
+    </head>
+    
+    
+        <body style="background-color: rgb(255, 255, 255);">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-content-center">
+                <div class="col-8 barra">
+                    <img src="/img/Logo YB.jpeg" alt="logo" width="150" >
+                </div>
+                <div class="col-4 text-right barra">
+                    <ul class="navbar-nav mr-auto">
+                        <li>
+                            <a href="/dashboard.html" class="px-3 text-light perfil dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle user"></i></a>
+    
+                            <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                                <a class="dropdown-item menuperfil cerrar" href="/index .html"><i class="fas fa-sign-out-alt m-1"></i>SALIR</a>
+                                <a class="dropdown-item menuperfil cerrar" href="/dashboard.html"><i class="fas fa-home m-1"></i>INICIO</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="barra-lateral col-12 col-sm-auto">
+                    <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
+                        <h4 class="fa fa-address-book m-1" style="color:#E79F28";>Usuarios</h4></a>
+                        <a href="/Modulos/registro admin .html"><i class=""></i>Registrar cuenta</a>
+                        <a href="/Modulos/datatables_intro/Grafica.html"><i class="#"></i>Gráfica Clientes</a>
+                        <h4 class="fa fa-gamepad" style="color:#E79F28";>videojuegos</h4>
+                        <a href="/Modulos/Videojuegos.html"><i class="#"></i>Mis videojuegos</a>
+                        <h4 class="fa fa-tags" style="color:#E79F28";>Productos</h4>
+                        <a href="/Modulos/Añadir.html"><i class="#"></i>Añadir Productos</a>
+                        <a href="#"><i class="#"></i>Inventario</a>
+                    </nav>
+                </div>
+                <main class="main col">
+                    <div class="row justify-content-center align-content-center text-center">
+                        
+                        <script>
+                            window.onload = function () {
+                            
+                            var chart = new CanvasJS.Chart("chartContainer", {
+                                animationEnabled: true,
+                                theme: "light2", // "light1", "light2", "dark1", "dark2"
+                                title:{
+                                    text: "VENTAS MENSUALES"
+                                },
+                                axisY: {
+                                    title: "CANTIDAD"
+                                },
+                                data: [{        
+                                    type: "column",  
+                                    showInLegend: true, 
+                                    legendMarkerColor: "red",
+                                    legendText: "Top ventas",
+                                    dataPoints:    
+                                    
+                                    [     
+                                         
+                                        { y: 250, label: "Play" },
+                                        { y: 328,  label: "Xbox" },
+                                        { y: 262,  label: "PC" },
+                                        { y: 140,  label: "Otros" },
+                                        
+                                    ]
+                                }]
+                            });
+                            chart.render();
+                            
+                            }
+                            </script>
+                            </head>
+                            <body>
+                            <div id="chartContainer" style="height: 300px; width: 70%;"></div>
+                            
+                    </div>
+            
+        
+    
+    
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/646c794df3.js"></script>
+    
+        <!--Ejemplo tabla con DataTables-->
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">        
+                            <table id="example" class="table table-striped" style="width:100%">
+                            <thead >
+                                <br><br>
+                                <tr >
+                                    <th>ID</th>
+                                    <th>NOMBRE</th>
+                                    <th>DESCRIPCION</th>
+                                    <th>PRECIO</th>
+                                    <th>DISPONIBILIDAD</th>
+                                    <th>CATEGORIA</th>
+
+                                    
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr class="table-danger" >
+                                    <td>01</td>
+                                    <td>Mouse</td>
+                                    <td>Negro</td>
+                                    <td>$15.000</td>
+                                    <td>No</td>
+                                    <th>PC</th>
+                                </tr>
+                                <tr class="table-danger">
+                                    <td>02</td>
+                                    <td>Torre</td>
+                                    <td>Azul con Blanco</td>
+                                    <td>$20.000</td>
+                                    <td>No</td>
+                                    <th>PC</th>
+                                </tr>
+                                <tr class="table-info">
+                                    <td>03</td>
+                                    <td>Popsocked</td>
+                                    <td>Rojo</td>
+                                    <td>$5.000</td>
+                                    <td>Si</td>
+                                    <th>Otros</th>
+                                </tr>
+                                <tr class="table-success">
+                                    <td>03</td>
+                                    <td>Gatillos</td>
+                                    <td>Blancos</td>
+                                    <td>$1.500</td>
+                                    <td>Si</td>
+                                    <th>Xbox</th>
+                                </tr>
+                                
+                                <tr class="table-danger">
+                                    <td>03</td>
+                                    <td>Joisticks</td>
+                                    <td>Rojo</td>
+                                    <td>$5.000</td>
+                                    <td>Si</td>
+                                    <th>PC</th>
+                                </tr >
+                                
+                                <tr class="table-success">
+                                    <td>03</td>
+                                    <td>Joisticks</td>
+                                    <td>Verdes</td>
+                                    <td>$5.000</td>
+                                    <td>Si</td>
+                                    <th>Xbox</th>
+                                </tr>
+                                
+                                <tr class="table-danger">
+                                    <td>03</td>
+                                    <td>Joisticks</td>
+                                    <td>verdes</td>
+                                    <td>$5.000</td>
+                                    <td>Si</td>
+                                    <th>PC</th>
+                                </tr>
+                                
+                                <tr class="table-primary">
+                                    <td>03</td>
+                                    <td>Joisticks</td>
+                                    <td>Rojo</td>
+                                    <td>$5.000</td>
+                                    <td>Si</td>
+                                    <th>Play</th>
+                                </tr>
+                                </tr>
+                                <tr class="table-danger">
+                                <td>03</td>
+                                <td>Joisticks</td>
+                                <td>Rojo</td>
+                                <td>$5.000</td>
+                                <td>Si</td>
+                                <th>PC</th>
+                            </tr>
+                                </tr>
+                                <tr class="table-primary">
+                                    <td>03</td>
+                                    <td>Joisticks</td>
+                                    <td>Rojo</td>
+                                    <td>$5.000</td>
+                                    <td>Si</td>
+                                    <th>Play</th>
+                            </tr>
+                               
+                       </table>   
+                       
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>    
+</div>
+</main>
+</div>
+</div>
+
+        
+    <!--Ejemplo tabla con HTML-->  
+    <!--<div style="height:50px"></div> 
+    <div class="container">
+    <h3>Tabla con <span class="badge badge-secondary">HTML puro</span></h3>
+    <div class="row">
+            <div class="col-lg-12">
+                <table border=1 cellpadding=1>
+                    <thead>
+                        <th>Nombre</th>
+                        <th>País</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Perez</td>
+                            <td>Argentina</td>
+                        </tr>
+                        <tr>
+                            <td>María Pía</td>
+                            <td>Venezuela</td>
+                        </tr>
+                        <tr>
+                            <td>Juan Caros</td>
+                            <td>Perú</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    </div>    -->
+      
+      
+    <!--Ejemplo tabla con bootstrap 4-->    
+    <!--<div style="height:50px"></div>               
+    <div class="container">
+    <h3>Tabla con <span class="badge badge-secondary">BOOTSTRAP 4</span></h3>
+    <div class="row">
+            <div class="col-lg-12">                    
+                <table class="table table-striped table-hover table-bordered">
+                    <thead class="thead-dark">
+                        <th>Nombre</th>
+                        <th>País</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Perez</td>
+                            <td>Argentina</td>
+                        </tr>
+                        <tr>
+                            <td>María Pía</td>
+                            <td>Venezuela</td>
+                        </tr>
+                        <tr>
+                            <td>Juan Caros</td>
+                            <td>Perú</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    </div>-->    
+      
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+    <!-- datatables JS -->
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
+     
+    <script type="text/javascript" src="main.js"></script>  
+    
+    
+  </body>
+</html>
